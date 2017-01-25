@@ -13,9 +13,11 @@ For denoising glitched video with heavy, but transient artifacts.
 
 # Limitations
 
-* Slow
+* Slow (qsort call for every byte)
+* Only yuv420p
 * Beginning of video is not processed
-* Not integrated with FFmpeg or Gstreamer => tricky to use
+* Stand-alone, not integrated info a framework.
+    * I've also implemented it as filter in FFmpeg: https://github.com/vi/FFmpeg/commits/vf_mediandenoise
 
 # Samples
 
