@@ -1,7 +1,7 @@
 # videomedian
 Temporal-median noise reduction video filter
 
-For denoising heavily glitched video with frequent flickering artifacts.
+For denoising glitched video with heavy, but transient artifacts.
 
 # Usage
 
