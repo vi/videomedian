@@ -50,10 +50,22 @@ $ cat 200x200_glitch.yuv | videomedian 200 200 7 7 7 | dd iflag=fullblock bs=$((
 
 ![200x200_repair](https://cloud.githubusercontent.com/assets/173219/22273146/c11626a0-e2af-11e6-8664-59f09c319dbc.gif)
 
+### ATA (for comparison)
+
+    ffmpeg -f rawvideo -s 200x200 -i 200x200_glitch.yuv -vf atadenoise=s=7:p=7:0a=0:0b=0:1a=0:1b=0:2a=0:2b=0 -y 200x200_atarep.gif
+    
+Unglitched: Glitched:
+
+![200x200_ata](https://cloud.githubusercontent.com/assets/173219/22309436/48e5f98c-e35c-11e6-8494-21e37ef2cff1.gif) ![200x200_atarep](https://cloud.githubusercontent.com/assets/173219/22309447/54623ee2-e35c-11e6-99e8-7ef2920490ad.gif)
 
 ## Natural
 
 (only U and V planes, queue size 7)
 
 ![sample2](https://cloud.githubusercontent.com/assets/173219/22272605/2148d0f8-e2ac-11e6-8c6e-c919da950d8d.gif) -> ![sample1](https://cloud.githubusercontent.com/assets/173219/22272622/3318de90-e2ac-11e6-9262-3023a55c80ba.gif)
+
+For comparison, ATA in dumb mode (`0a=0:0b=0:1a=0:1b=0:2a=0:2b=0:s=7:p=6`):
+
+![b_200x200_ata](https://cloud.githubusercontent.com/assets/173219/22309819/f5c3e50a-e35d-11e6-8777-b96a10dba66e.gif)
+
 
