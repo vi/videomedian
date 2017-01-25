@@ -5,7 +5,7 @@ For denoising glitched video with heavy, but transient artifacts.
 
 # Usage
 
-    Usage: videomedia w h  y_med u_med v_med < yuv420p > yuv420
+    Usage: videomedia w h  y_med u_med v_med < yuv420p > yuv420p
     
     Example:
     

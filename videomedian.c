@@ -15,7 +15,7 @@ static int cmpfunc (const void * a, const void * b)
 
 int main(int argc, char* argv[]) {
     if (argc!=6) {
-        fprintf(stderr, "Usage: videomedia w h  y_med u_med v_med < yuv420p > yuv420\n");
+        fprintf(stderr, "Usage: videomedia w h  y_med u_med v_med < yuv420p > yuv420p\n");
         return 4;
     }
     
