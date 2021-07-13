@@ -1,3 +1,7 @@
+# Note
+
+FFmpeg now seems to have similar filter built-in: [`-vf tmedian`](https://ffmpeg.org/ffmpeg-filters.html#tmedian).
+
 # videomedian
 Temporal-median noise reduction video filter
 
